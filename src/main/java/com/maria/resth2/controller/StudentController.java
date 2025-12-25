@@ -3,8 +3,8 @@ package com.maria.resth2.controller;
 import com.maria.resth2.entity.Student;
 import com.maria.resth2.service.StudentService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("/api/students")
@@ -16,8 +16,10 @@ public class StudentController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Student create(@RequestBody Student student) {
-        return service.save(student);
+        Student created = service.save(student);
+        return created;
     }
 
     @GetMapping
@@ -32,16 +34,12 @@ public class StudentController {
 
     @PutMapping("/{id}")
     public Student update(@PathVariable Long id, @RequestBody Student student) {
-        Student existing = service.findById(id);
-        existing.setName(student.getName());
-        existing.setCourse(student.getCourse());
-        existing.setEmail(student.getEmail());
-        return service.save(existing);
+        return service.updateById(id, student);
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable Long id) {
-        return service.delete(id);
-//        return "Student deleted successfully";
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
     }
 }
