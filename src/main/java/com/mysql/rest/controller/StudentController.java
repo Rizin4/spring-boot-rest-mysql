@@ -1,10 +1,12 @@
-package com.maria.resth2.controller;
+package com.mysql.rest.controller;
 
-import com.maria.resth2.dto.StudentRequestDTO;
-import com.maria.resth2.dto.StudentResponseDTO;
-import com.maria.resth2.dto.StudentUpdateDTO;
-import com.maria.resth2.service.StudentService;
 import org.springframework.web.bind.annotation.*;
+
+import com.mysql.rest.dto.StudentRequestDTO;
+import com.mysql.rest.dto.StudentResponseDTO;
+import com.mysql.rest.dto.StudentUpdateDTO;
+import com.mysql.rest.service.StudentService;
+
 import java.util.List;
 import org.springframework.http.HttpStatus;
 

@@ -1,4 +1,4 @@
-package com.maria.resth2.entity;
+package com.mysql.rest.entity;
 
 import java.time.LocalDateTime;
 

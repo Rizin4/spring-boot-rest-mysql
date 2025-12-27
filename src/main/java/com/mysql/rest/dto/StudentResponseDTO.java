@@ -1,4 +1,4 @@
-package com.maria.resth2.dto;
+package com.mysql.rest.dto;
 
 public class StudentResponseDTO {
 	private Long id;

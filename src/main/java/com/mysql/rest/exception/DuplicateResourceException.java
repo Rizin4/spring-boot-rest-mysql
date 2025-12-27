@@ -1,4 +1,4 @@
-package com.maria.resth2.exception;
+package com.mysql.rest.exception;
 
 
 public class DuplicateResourceException extends RuntimeException{

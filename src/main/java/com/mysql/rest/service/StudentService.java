@@ -1,14 +1,15 @@
-package com.maria.resth2.service;
+package com.mysql.rest.service;
 
-import com.maria.resth2.dto.StudentRequestDTO;
-import com.maria.resth2.dto.StudentResponseDTO;
-import com.maria.resth2.dto.StudentUpdateDTO;
-import com.maria.resth2.entity.Student;
-import com.maria.resth2.exception.DuplicateResourceException;
-import com.maria.resth2.exception.ResourceNotFoundException;
-import com.maria.resth2.mapper.StudentMapper;
-import com.maria.resth2.repository.StudentRepository;
 import org.springframework.stereotype.Service;
+
+import com.mysql.rest.dto.StudentRequestDTO;
+import com.mysql.rest.dto.StudentResponseDTO;
+import com.mysql.rest.dto.StudentUpdateDTO;
+import com.mysql.rest.entity.Student;
+import com.mysql.rest.exception.DuplicateResourceException;
+import com.mysql.rest.exception.ResourceNotFoundException;
+import com.mysql.rest.mapper.StudentMapper;
+import com.mysql.rest.repository.StudentRepository;
 
 import java.util.List;
 import java.util.Optional;

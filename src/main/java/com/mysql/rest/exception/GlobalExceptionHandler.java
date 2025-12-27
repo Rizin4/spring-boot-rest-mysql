@@ -1,4 +1,4 @@
-package com.maria.resth2.exception;
+package com.mysql.rest.exception;
 
 import java.time.LocalDateTime;
 

@@ -10,8 +10,8 @@
 		<relativePath />
 	</parent>
 
-	<groupId>com.maria</groupId>
-	<artifactId>maria-spring-boot-rest-h2-basic</artifactId>
+	<groupId>com.rizin</groupId>
+	<artifactId>spring-boot-rest-mysql</artifactId>
 	<version>1.0.0</version>
 
 	<properties>

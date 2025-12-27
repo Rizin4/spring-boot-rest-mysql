@@ -1,8 +1,8 @@
-package com.maria.resth2.mapper;
+package com.mysql.rest.mapper;
 
-import com.maria.resth2.dto.StudentRequestDTO;
-import com.maria.resth2.dto.StudentResponseDTO;
-import com.maria.resth2.entity.Student;
+import com.mysql.rest.dto.StudentRequestDTO;
+import com.mysql.rest.dto.StudentResponseDTO;
+import com.mysql.rest.entity.Student;
 
 public class StudentMapper {
 
