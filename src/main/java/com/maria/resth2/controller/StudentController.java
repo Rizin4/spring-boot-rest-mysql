@@ -1,6 +1,8 @@
 package com.maria.resth2.controller;
 
-import com.maria.resth2.entity.Student;
+import com.maria.resth2.dto.StudentRequestDTO;
+import com.maria.resth2.dto.StudentResponseDTO;
+import com.maria.resth2.dto.StudentUpdateDTO;
 import com.maria.resth2.service.StudentService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -17,24 +19,23 @@ public class StudentController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Student create(@RequestBody Student student) {
-        Student created = service.save(student);
-        return created;
+    public StudentResponseDTO create(@RequestBody StudentRequestDTO dto) {
+    	return service.save(dto);
     }
 
     @GetMapping
-    public List<Student> getAll() {
+    public List<StudentResponseDTO> getAll() {
         return service.findAll();
     }
 
     @GetMapping("/{id}")
-    public Student getById(@PathVariable Long id) {
+    public StudentResponseDTO getById(@PathVariable Long id) {
         return service.findById(id);
     }
 
     @PutMapping("/{id}")
-    public Student update(@PathVariable Long id, @RequestBody Student student) {
-        return service.updateById(id, student);
+    public StudentResponseDTO update(@PathVariable Long id, @RequestBody StudentUpdateDTO dto) {
+        return service.updateById(id, dto);
     }
 
     @DeleteMapping("/{id}")
