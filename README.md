@@ -13,8 +13,18 @@ This project is built for learning and understanding **clean backend structure**
 - Update student details
 - Delete student
 - DTO-based request & response handling
+- Service-layer unit testing using JUnit & Mockito
 - Centralized exception handling using `GlobalExceptionHandler`
 - Clean separation of Controller, Service, DTO, Entity, Repository layers
+
+## 🧪 Testing
+
+- Unit tests written for the **Service layer**
+- Repository interactions are **mocked using Mockito**
+- Business logic is tested in isolation (no Spring context, no database)
+- Covers:
+  - Successful update scenarios
+  - Resource-not-found cases
 
 ## 🛠️ Tech Stack
 
@@ -36,6 +46,9 @@ src/main/java
 ├── dto         # Request & Response DTOs
 ├── mapper      # DTO ↔ Entity mapping
 └── exception   # Custom exceptions & GlobalExceptionHandler
+src/test/java
+└── com.mysql.rest.service
+└── StudentServiceTest
  ```
 ## Run:
 
